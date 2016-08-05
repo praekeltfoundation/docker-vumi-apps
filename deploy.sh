@@ -7,6 +7,8 @@ if [[ "$#" != "1" ]]; then
   exit 1
 fi
 
+IMAGE_TAG="$1"; shift
+
 # Parse the version from the requirements file
 APP="${IMAGE_TAG##*/}"
 VERSION="$(sed -n -E "s/\s*$APP\s*==\s*([^\s\;]+).*/\1/p" requirements/$APP.txt)"
