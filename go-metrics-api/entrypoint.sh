@@ -16,6 +16,7 @@ backend:
   ${GRAPHITE_PASSWORD:+password: '$GRAPHITE_PASSWORD'}
 
   ${GRAPHITE_PREFIX:+prefix: '$GRAPHITE_PREFIX'}
+  ${GRAPHITE_DISABLE_AUTO_PREFIX:+disable_auto_prefix: '$GRAPHITE_DISABLE_AUTO_PREFIX'}
 
   ${AMQP_HOST:+amqp_hostname: '$AMQP_HOST'}
   ${AMQP_PORT:+amqp_port: $AMQP_PORT}
