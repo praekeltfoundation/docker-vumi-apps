@@ -13,6 +13,7 @@ These variables set parameters for the Graphite backend:
 * `GRAPHITE_USERNAME`
 * `GRAPHITE_PASSWORD`
 * `GRAPHITE_PREFIX`
+* `GRAPHITE_DISABLE_AUTO_PREFIX`
 * `AMQP_HOST`
 * `AMQP_PORT`
 * `AMQP_VHOST`
