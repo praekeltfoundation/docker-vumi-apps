@@ -1,0 +1,2 @@
+# This is here so the deploy script knows what version we're on.
+# there is no go-bridge-api package as it's shipped with Vumi
