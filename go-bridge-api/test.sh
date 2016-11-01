@@ -48,7 +48,7 @@ function try_a_few_times {
 
 function check_bridge_api_logs {
   echo "Checking container logs to see if it started correctly..."
-  docker logs go-bridge-api | fgrep 'MetricsApi starting on 8000'
+  docker logs go-bridge-api | fgrep 'Starting a GoConversationTransport worker'
   docker logs go-bridge-api | fgrep 'Got an authenticated connection'
 }
 try_a_few_times check_bridge_api_logs
