@@ -35,19 +35,7 @@ redis_manager:
   db: ${REDIS_DB}
 
 EOF
-CONFIG_FILE="/app/config.yml"
+export CONFIG_FILE="/app/config.yml"
+export WORKER_CLASS="vumi.transports.vumi_bridge.GoConversationTransport"
 
-# Generate Twisted's plugin cache just before running -- all plugins should be
-# installed at this point. Twisted is installed site-wide, so the root user is
-# needed to perform this operation. See:
-# http://twistedmatrix.com/documents/current/core/howto/plugin.html#plugin-caching
-python -c 'from twisted.plugin import IPlugin, getPlugins; list(getPlugins(IPlugin))'
-
-exec su-exec vumi \
-  twistd --nodaemon --pidfile="" vumi_worker \
-    --worker-class=vumi.transports.vumi_bridge.GoConversationTransport \
-    --config=/app/config.yml \
-    --hostname="$AMQP_HOST" \
-    --vhost="$AMQP_VHOST" \
-    --username="$AMQP_USERNAME" \
-    --password="$AMQP_PASSWORD"
+exec vumi-entrypoint.sh
