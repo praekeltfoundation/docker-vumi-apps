@@ -46,12 +46,12 @@ function try_a_few_times {
   done
 }
 
-function check_metrics_api_logs {
+function check_bridge_api_logs {
   echo "Checking container logs to see if it started correctly..."
   docker logs go-bridge-api | fgrep 'MetricsApi starting on 8000'
   docker logs go-bridge-api | fgrep 'Got an authenticated connection'
 }
-try_a_few_times check_metrics_api_logs
+try_a_few_times check_bridge_api_logs
 
 echo
 echo "Done"
