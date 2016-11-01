@@ -18,5 +18,5 @@ These variables set parameters for the transport:
 * `AMQP_PORT` (defaults to `5672`)
 * `AMQP_USERNAME` (defaults to `guest`)
 * `AMQP_PASSWORD` (defaults to `guest`)
-* `AMQP_VHOST` (defaults to `/guest`)
+* `AMQP_VHOST` (defaults to `/`)
 * `AMQP_PREFETCH_COUNT` (defaults to `20`)
