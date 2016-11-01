@@ -1,0 +1,5 @@
+# NOTE: This requirements file is not used.
+#       See: https://github.com/praekeltfoundation/docker-vumi-apps/issues/5
+#       This is here so the deploy script knows what version we're on.
+#       there is no go-bridge-api package as it's shipped with Vumi
+go-bridge-api==0.6.10
